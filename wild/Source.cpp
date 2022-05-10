@@ -12,7 +12,7 @@ void WriteTxt(map<char, int> Mymap) {
 
     text.open("txt/Occurrences.txt");
     if (text) {
-        text << "Les Occurrences demander : " << endl ;
+        text << "Les Occurrences demandees : " << endl ;
         for (map<char, int>::iterator it = Mymap.begin(); it != Mymap.end(); it++) {
             text << (*it).first << " = " << it->second << endl;
         }
@@ -66,13 +66,13 @@ int main() {
     char chr;
 
     while (end == 1) {
-        cout << "quelle lettre voulez vous pour en connaitre le nombre de fois qu'elle est dans le fichier texte : ";
+        cout << "quelle lettre voulez vous pour en connaitre son nombre d'apparition dans le fichier texte : ";
 
         cin >> chr;
 
         nbOccurrences(chr, Mymap);
 
-        cout << " voulez vous encore d'autre lettre/symbole ?" << endl << "Si oui : 1               Si non : 0" << endl;
+        cout << " voulez vous encore voir d'autre lettre/symbole ?" << endl << "Si oui : 1               Si non : 0" << endl;
 
         cin >> end;
     }
@@ -81,7 +81,7 @@ int main() {
         cout << (*it).first << " = " << it->second << endl;
     }
 
-    cout << "Tous vos demandes sont ecrit dans le fichier texte Occurences dans le dossier txt." << endl;
+    cout << "Toutes vos demandes sont ecrites dans le fichier texte Occurences dans le dossier txt." << endl;
 
     WriteTxt(Mymap);
 

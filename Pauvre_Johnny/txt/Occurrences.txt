@@ -1,2 +1,0 @@
-Les Occurrences demander : 
-f = 17
